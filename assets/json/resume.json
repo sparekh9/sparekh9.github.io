@@ -5,43 +5,70 @@
     "email": "spparekh@andrew.cmu.edu",
     "phone": "(332) 248-8513",
     "profiles": [
-      {
-        "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
-      }
+      
     ]
   },
   "education": [
     {
       "institution": "Carnegie Mellon University, Pittsburgh, PA",
       "location": "Pittsburgh, PA",
-      "url": "https://www.uzh.ch/",
+      "url": "http://coursecatalog.web.cmu.edu/schools-colleges/schoolofcomputerscience/undergraduatecomputerscience/",
       "area": "SCS Concentration in Machine Learning",
       "studyType": "B.S. in Computer Science",
       "startDate": "2021-08",
       "endDate": "2025-05",
-      "courses": ["Theory of Relativity"]
+      "courses": {
+        "Machine Learning and AI": [
+          "10-315 Introduction to Machine Learning",
+          "11-411 Natural Language Processing",
+          "11-485 Introduction to Deep Learning",
+          "10-422 Foundations of Learning, Game Theory, and Their Connections",
+          "10-708 Probabilistic Graphical Models*",
+          "10-720 Convex Optimization*"
+        ],
+        "Computer Science": [
+          "15-150 Principles of Functional Programming",
+          "15-213 Introduction to Computer Systems",
+          "15-210 Parallel and Sequential Algorithms and Data Structures",
+          "15-251 Great Theoretical Ideas in Computer Science",
+          "15-451 Algorithms Design and Analysis",
+          "15-445 Database Systems"
+        ],
+        "Mathematics": [
+          "15-151 Mathematical Foundations of Computer Science",
+          "21-241 Matrices and Linear Tranformations",
+          "21-259 Calculus in Three Dimensions",
+          "36-218 Probability Theory for Computer Scientists"
+        ],
+        "Computational Finance": [
+          "21-270 Introduction to Mathematical Finance",
+          "21-378 Mathematics of Fixed Income Markets"
+        ]
+      }
     }
   ],
   "work": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
+      "name": "MikoAI",
+      "position": "AI Intern - NLP",
       "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": ["Relativity"]
+      "startDate": "2022-06",
+      "endDate": "2022-08",
+      "location": "Mumbai, India",
+      "summary": "Streamlined the multilingual personality module of the Miko robot, enhancing its language processing capabilities across 8 languages.",
+      "highlights": [
+        "Benchmarked open-source machine translation models and Google Cloud Translate API using cosine similarity of SIEBERT generated sentence embeddings, optimizing cost-efficiency without compromising performance.",
+        "Developed a classification system for multilingual question answering using feed-forward neural networks, achieving linear speedup over traditional vector search methods."
+      ]
     }
   ],
   "awards": [
     {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
+      "title": "Dean's List with High Honors",
+      "startDate": "2021",
+      "endDate": "2025",
+      "awarder": "CMU School of Computer Science",
+      "summary": "Fall 2021, Fall 2022, Spring 2023, Fall 2024"
     }
   ],
   "publications": [
@@ -50,33 +77,37 @@
       "publisher": "EMNLP 2024 Findings",
       "releaseDate": "2024",
       "url": "https://aclanthology.org/2024.findings-emnlp.778/",
-      "summary": "It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source."
+      "summary": "Forms constitute a large portion of layout-rich documents that convey information through key-value pairs. In this paper, we present AliGATr, a graph-based model that uses a generative objective to represent complex grid-like layouts that are often found in forms. Using a grid-based graph topology, our model learns to generate the layout of each page token by token in a data efficient manner."
     }
   ],
   "skills": [
     {
-      "name": "Physics",
-      "level": "Master",
+      "name": "Programming Languages",
       "icon": "fa-solid fa-hashtag",
       "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
+        "C/C++",
+        "Python",
+        "Java",
+        "JavaScript"
+      ]
+    },
+    {
+      "name": "Programming Languages",
+      "icon": "fa-solid fa-hashtag",
+      "keywords": [
+        
       ]
     }
   ],
   "languages": [
     {
       "language": "English",
-      "fluency": "Native Speaker",
+      "fluency": "Native",
       "icon": ""
     },
     {
       "language": "Gujarati",
-      "fluency": "Native Speaker",
+      "fluency": "Native",
       "icon": ""
     },
     {
@@ -91,39 +122,9 @@
     }
   ],
   "interests": [
-    {
-      "name": "Physics",
-      "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
-      ]
-    }
-  ],
-  "references": [
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-laptop",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
-    },
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-thumbtack",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
-    }
+    
   ],
   "projects": [
-    {
-      "name": "Quantum Computing",
-      "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
-      "startDate": "2018-01-01",
-      "endDate": "2018-01-01",
-      "url": "https://example.com"
-    }
+    
   ]
 }
