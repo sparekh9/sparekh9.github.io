@@ -4,6 +4,7 @@
     "image": "",
     "email": "spparekh@andrew.cmu.edu",
     "phone": "(332) 248-8513",
+    "location":"Pittsburgh, PA",
     "profiles": [
       
     ]
@@ -23,11 +24,10 @@
           "11-411 Natural Language Processing",
           "11-485 Introduction to Deep Learning",
           "10-422 Foundations of Learning, Game Theory, and Their Connections",
-          "10-708 Probabilistic Graphical Models*",
-          "10-720 Convex Optimization*"
+          "10-708 Probabilistic Graphical Models *",
+          "10-720 Convex Optimization *"
         ],
         "Computer Science": [
-          "15-150 Principles of Functional Programming",
           "15-213 Introduction to Computer Systems",
           "15-210 Parallel and Sequential Algorithms and Data Structures",
           "15-251 Great Theoretical Ideas in Computer Science",
@@ -51,20 +51,21 @@
     {
       "name": "MikoAI",
       "position": "AI Intern - NLP",
-      "url": "https://example.com",
+      "url": "https://miko.ai",
       "startDate": "2022-06",
       "endDate": "2022-08",
       "location": "Mumbai, India",
       "summary": "Streamlined the multilingual personality module of the Miko robot, enhancing its language processing capabilities across 8 languages.",
       "highlights": [
-        "Benchmarked open-source machine translation models and Google Cloud Translate API using cosine similarity of SIEBERT generated sentence embeddings, optimizing cost-efficiency without compromising performance.",
-        "Developed a classification system for multilingual question answering using feed-forward neural networks, achieving linear speedup over traditional vector search methods."
+        "Benchmarked open-source machine translation models towards optimizing cost-efficiency without compromising performance.",
+        "Developed a neural classifier for question answering, achieving linear speedup over traditional vector search."
       ]
     }
   ],
   "awards": [
     {
       "title": "Dean's List with High Honors",
+      "url": "https://www.cs.cmu.edu/academics/undergraduate/deans-list",
       "startDate": "2021",
       "endDate": "2025",
       "awarder": "CMU School of Computer Science",
@@ -88,14 +89,37 @@
         "C/C++",
         "Python",
         "Java",
-        "JavaScript"
+        "JavaScript",
+        "Julia",
+        "OCaml"
       ]
     },
     {
-      "name": "Programming Languages",
+      "name": "Machine Learning",
       "icon": "fa-solid fa-hashtag",
       "keywords": [
-        
+        "PyTorch",
+        "Tensorflow",
+        "Transformers",
+        "Scikit-Learn",
+        "NumPy",
+        "Pandas"
+      ]
+    },
+    {
+      "name": "Cloud",
+      "icon":"fa-solid fa-hashtag",
+      "keywords": [
+        "AWS",
+        "Google Cloud Platform"
+      ]
+    },
+    {
+      "name": "Miscellaneous",
+      "icon":"fa-solid fa-hashtag",
+      "keywords": [
+        "Git",
+        "Docker"
       ]
     }
   ],

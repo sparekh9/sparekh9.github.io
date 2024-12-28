@@ -1,11 +1,11 @@
 ---
 layout: cv
 permalink: /cv/
-title: CV
+title: cv
 nav: true
 nav_order: 5
 cv_pdf: CV.pdf # you can also use external links here
-description: For a more concise CV, feel free to download the PDF version. 
+description: Feel free to reach out if you have any questions! 
 toc:
   sidebar: left
 ---
