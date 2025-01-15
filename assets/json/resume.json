@@ -78,7 +78,7 @@
       "publisher": "EMNLP 2024 Findings",
       "releaseDate": "2024",
       "url": "https://aclanthology.org/2024.findings-emnlp.778/",
-      "summary": "Forms constitute a large portion of layout-rich documents that convey information through key-value pairs. In this paper, we present AliGATr, a graph-based model that uses a generative objective to represent complex grid-like layouts that are often found in forms. Using a grid-based graph topology, our model learns to generate the layout of each page token by token in a data efficient manner."
+      "summary": "Forms constitute a large portion of layout-rich documents that convey information through key-value pairs. In this paper, we present AliGATr, a graph-based model that uses a generative objective to represent complex grid-like layouts that are often found in forms. Using a grid-based graph topology, our model learns to generate the layout of each page token by token in a data efficient manner, matching state-of-the-art models."
     }
   ],
   "skills": [
