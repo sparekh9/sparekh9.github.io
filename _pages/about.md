@@ -18,7 +18,7 @@ Hi! I'm Siddharth, a senior studying Computer Science at CMU. My current researc
 
 I've worked extensively with Professor [Carolyn Rosé's][rose] Document Understanding Group at CMU's Language Technologies Institute - collaborating with [Armineh Nourbakhsh][nourbakhsh] on developing graph-based models for form processing, and robust evaluation metrics for document visual question answering. 
 
-Zooming out, I often find myself in a random walk by the convergence of mathematics and computer science in machine learning. To this end, I hope to develop innovative solutions across disciplines with strong theoretical foundations. 
+Zooming out, I often find myself along the confluence of mathematics and computer science hoping to find innovative applications with strong theoretical foundations.
 
 Feel free to reach out to me to chat about my research or any shared interests!
 
