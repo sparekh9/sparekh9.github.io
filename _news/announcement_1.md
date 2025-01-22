@@ -5,7 +5,7 @@ inline: true
 related_posts: false
 ---
 
-[AliGATr][aligatr] got accepted to EMNLP 2024! 
+[AliGATr][aligatr] got accepted to EMNLP 2024 (Findings)! 
 
 
 
