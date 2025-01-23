@@ -5,7 +5,7 @@ inline: true
 related_posts: false
 ---
 
-[AliGATr][aligatr] got accepted to EMNLP 2024 (Findings)! 
+Our work on form understanding, [AliGATr: Graph-based layout generation for form understanding][aligatr] got accepted to EMNLP 2024 Findings! 
 
 
 

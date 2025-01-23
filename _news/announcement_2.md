@@ -5,4 +5,7 @@ inline: true
 related_posts: false
 ---
 
-SEDGE got accepted to NAACL 2025 (Findings)! 
+Our work on [Where is this coming from? Making groundedness count in the evaluation of Document VQA models][sedge] got accepted to NAACL 2025 Findings! 
+
+[sedge]: https://sparekh.me/
+[naacl25]: https://2025.naacl.org/
