@@ -11,7 +11,22 @@
   },
   "education": [
     {
-      "institution": "Carnegie Mellon University, Pittsburgh, PA",
+      "institution": "Carnegie Mellon University",
+      "location": "Pittsburgh, PA",
+      "url": "http://coursecatalog.web.cmu.edu/schools-colleges/schoolofcomputerscience/undergraduatecomputerscience/",
+      "studyType": "M.S. in Computer Science",
+      "startDate": "2025-08",
+      "endDate": "2026-08",
+      "courses": {
+        "Selected Coursework": [
+          "10-703 Deep Reinforcement Learning and Control",
+          "11-711 Advanced Natural Language Processing",
+          "15-888 Computational Game Solving"
+        ]
+      }
+    },
+    {
+      "institution": "Carnegie Mellon University",
       "location": "Pittsburgh, PA",
       "url": "http://coursecatalog.web.cmu.edu/schools-colleges/schoolofcomputerscience/undergraduatecomputerscience/",
       "area": "SCS Concentration in Machine Learning",
@@ -84,7 +99,7 @@
       "name": "Where is this coming from? Making groundedness count in the evaluation of Document VQA models",
       "publisher": "NAACL 2025 Findings",
       "releaseDate": "2025",
-      "url": "https://arxiv.org/abs/2503.19120",
+      "url": "https://aclanthology.org/2025.findings-naacl.295/",
       "summary": "Document VQA models have evolved at an impressive rate over the past few years. We propose a new evaluation methodology that accounts for the groundedness of predictions with regards to the semantic category of the output as well as the multimodal placement of the output within the input document. Through extensive analyses, we demonstrate that our proposed method produces scores that are a better indicator of a model's robustness, and tends to give higher rewards to better-calibrated answers."
     }
   ],

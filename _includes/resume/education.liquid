@@ -44,17 +44,25 @@
           <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">{{ content.area }}</h6>
         </div>
         <div style="padding-top: 5px; padding-left: 5px">
-          {% for item in content.courses %}
-            <div style="padding-bottom: 5px">
-              <span style="font-size: 0.95rem; font-style:italic; font-weight: 450">
-                {{ item[0] | append: ':' }}</span>
-              <ul style="margin-left: 0; list-style-position: inside; padding-inline-start: 0; ">
-                {% for course in item[1] %}
-                  <li>{{ course }}</li>
-                {% endfor %}
-              </ul>
-            </div>
-          {% endfor %}
+            {% for item in content.courses %}
+              {% if item[0] != "" %}
+                <div style="padding-bottom: 5px">
+                <span style="font-size: 0.95rem; font-style:italic; font-weight: 450">
+                  {{ item[0] | append: ':' }}</span>
+                <ul style="margin-left: 0; list-style-position: inside; padding-inline-start: 0; ">
+                  {% for course in item[1] %}
+                    <li>{{ course }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            {% else %}
+                <ul style="margin-left: 0; list-style-position: inside; padding-inline-start: 0; ">
+                  {% for course in item[1] %}
+                    <li>{{ course }}</li>
+                  {% endfor %}
+                </ul>
+            {% endif%}
+            {% endfor %}
         </div>
       </div>
     </li>

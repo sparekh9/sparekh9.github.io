@@ -2,40 +2,72 @@
 ---
 
 @inproceedings{nourbakhsh-etal-2024-aligatr,
-    title = "{A}li{GAT}r: Graph-based layout generation for form understanding",
-    author = "Nourbakhsh, Armineh  and
-      Jin, Zhao  and
-      Parekh, Siddharth  and
-      Shah, Sameena  and
-      Rose, Carolyn",
-    editor = "Al-Onaizan, Yaser  and
-      Bansal, Mohit  and
-      Chen, Yun-Nung",
-    booktitle = "Findings of the Association for Computational Linguistics: EMNLP 2024",
-    month = nov,
-    year = "2024",
-    address = "Miami, Florida, USA",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2024.findings-emnlp.778",
-    doi = "10.18653/v1/2024.findings-emnlp.778",
-    pages = "13309--13328",
-    abstract = "Forms constitute a large portion of layout-rich documents that convey information through key-value pairs. Form understanding involves two main tasks, namely, the identification of keys and values (a.k.a Key Information Extraction or KIE) and the association of keys to corresponding values (a.k.a. Relation Extraction or RE). State of the art models for form understanding often rely on training paradigms that yield poorly calibrated output probabilities and low performance on RE. In this paper, we present AliGATr, a graph-based model that uses a generative objective to represent complex grid-like layouts that are often found in forms. Using a grid-based graph topology, our model learns to generate the layout of each page token by token in a data efficient manner. Despite using 30{\%} fewer parameters than the smallest SotA, AliGATr performs on par with or better than SotA models on the KIE and RE tasks against four datasets. We also show that AliGATr{'}s output probabilities are better calibrated and do not exhibit the over-confident distributions of other SotA models.",
-    selected = true
+  title = "{A}li{GAT}r: Graph-based layout generation for form understanding",
+  author = "Nourbakhsh, Armineh and Jin, Zhao and Parekh, Siddharth and Shah,
+            Sameena and Rose, Carolyn",
+  editor = "Al-Onaizan, Yaser and Bansal, Mohit and Chen, Yun-Nung",
+  booktitle = "Findings of the Association for Computational Linguistics: EMNLP
+               2024",
+  month = nov,
+  year = "2024",
+  address = "Miami, Florida, USA",
+  publisher = "Association for Computational Linguistics",
+  url = "https://aclanthology.org/2024.findings-emnlp.778",
+  doi = "10.18653/v1/2024.findings-emnlp.778",
+  pages = "13309--13328",
+  abstract = "Forms constitute a large portion of layout-rich documents that
+              convey information through key-value pairs. Form understanding
+              involves two main tasks, namely, the identification of keys and
+              values (a.k.a Key Information Extraction or KIE) and the
+              association of keys to corresponding values (a.k.a. Relation
+              Extraction or RE). State of the art models for form understanding
+              often rely on training paradigms that yield poorly calibrated
+              output probabilities and low performance on RE. In this paper, we
+              present AliGATr, a graph-based model that uses a generative
+              objective to represent complex grid-like layouts that are often
+              found in forms. Using a grid-based graph topology, our model learns
+              to generate the layout of each page token by token in a data
+              efficient manner. Despite using 30{\%} fewer parameters than the
+              smallest SotA, AliGATr performs on par with or better than SotA
+              models on the KIE and RE tasks against four datasets. We also show
+              that AliGATr{'}s output probabilities are better calibrated and do
+              not exhibit the over-confident distributions of other SotA models.",
+  selected = true,
 }
 
-@inproceedings{nourbakhsh-etal-2025-sedge,
-  title = "Where is this coming from? Making groundedness count in the evaluation of Document VQA models",
-  author = "Nourbakhsh, Armineh  and
-      Parekh, Siddharth  and
-      Shetty, Pranav  and
-      Jin, Zhao  and
-      Shah, Sameena  and
-      Rose, Carolyn",
-  booktitle = "Findings of the 2025 Annual Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics: NLP in a Multicultural World",
-  month = "april",
+@inproceedings{nourbakhsh-etal-2025-coming,
+  title = "Where is this coming from? Making groundedness count in the
+           evaluation of Document {VQA} models",
+  author = "Nourbakhsh, Armineh and Parekh, Siddharth and Shetty, Pranav and Jin
+            , Zhao and Shah, Sameena and Rose, Carolyn",
+  editor = "Chiruzzo, Luis and Ritter, Alan and Wang, Lu",
+  booktitle = "Findings of the Association for Computational Linguistics: NAACL
+               2025",
+  month = apr,
   year = "2025",
+  address = "Albuquerque, New Mexico",
   publisher = "Association for Computational Linguistics",
-  address = "Albuquerque, New Mexico, USA",
+  url = "https://aclanthology.org/2025.findings-naacl.295/",
+  pages = "5326--5346",
+  ISBN = "979-8-89176-195-7",
   selected = true,
-  abstract = "Document VQA models have evolved at an impressive rate over the past few years, coming close to or matching human performance on some benchmarks. We argue that common evaluation metrics used by popular benchmarks do not account for the semantic and multimodal groundedness of a model's outputs. As a result, hallucinations and major semantic errors are treated the same way as well-grounded outputs, and the evaluation scores do not reflect the reasoning capabilities of the model. In response, we propose a new evaluation methodology that accounts for the groundedness of predictions with regards to the semantic category of the output as well as the multimodal placement of the output within the input document. Our proposed methodology is parameterized in such a way that users can configure the score to their preferences. We validate our scoring methodology using human judgment and show its potential impact on existing popular leaderboards. Through extensive analyses, we demonstrate that our proposed method produces scores that are a better indicator of a model's robustness, and tends to give higher rewards to better-calibrated answers.",
+  abstract = "Document Visual Question Answering (VQA) models have evolved at an
+              impressive rate over the past few years, coming close to or
+              matching human performance on some benchmarks. We argue that common
+              evaluation metrics used by popular benchmarks do not account for
+              the semantic and multimodal groundedness of a model`s outputs. As a
+              result, hallucinations and major semantic errors are treated the
+              same way as well-grounded outputs, and the evaluation scores do not
+              reflect the reasoning capabilities of the model. In response, we
+              propose a new evaluation methodology that accounts for the
+              groundedness of predictions with regard to the semantic
+              characteristics of the output as well as the multimodal placement
+              of the output within the input document. Our proposed methodology
+              is parameterized in such a way that users can configure the score
+              according to their preferences. We validate our scoring methodology
+              using human judgment and show its potential impact on existing
+              popular leaderboards. Through extensive analyses, we demonstrate
+              that our proposed method produces scores that are a better
+              indicator of a model`s robustness and tends to give higher rewards
+              to better-calibrated answers.",
 }

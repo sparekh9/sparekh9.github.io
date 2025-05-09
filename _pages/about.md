@@ -14,7 +14,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Hi! I'm Siddharth, a senior studying Computer Science at CMU. My current research interests lie in the intersection of natural language processing, machine learning, and game theory - towards building intelligent systems using language agents. 
+Hi! I’m Siddharth, a Computer Science student at CMU, completing my undergraduate studies and transitioning into the fifth-year Master's program. My current research interests lie in the intersection of natural language processing, machine learning, and game theory - towards building intelligent systems using language agents. 
 
 I've worked extensively with Professor [Carolyn Rosé's][rose] Document Understanding Group at CMU's Language Technologies Institute - collaborating with [Armineh Nourbakhsh][nourbakhsh] on developing graph-based models for form processing, and robust evaluation metrics for document visual question answering. 
 
