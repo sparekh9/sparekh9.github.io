@@ -29,8 +29,8 @@
       "institution": "Carnegie Mellon University",
       "location": "Pittsburgh, PA",
       "url": "http://coursecatalog.web.cmu.edu/schools-colleges/schoolofcomputerscience/undergraduatecomputerscience/",
-      "area": "SCS Concentration in Machine Learning",
-      "studyType": "B.S. in Computer Science",
+      "honors": "University Honors, SCS College Honors",
+      "studyType": "B.S. in Computer Science, Minor in Machine Learning",
       "startDate": "2021-08",
       "endDate": "2025-05",
       "courses": {
@@ -84,7 +84,7 @@
       "startDate": "2021",
       "endDate": "2025",
       "awarder": "CMU School of Computer Science",
-      "summary": "Fall 2021, Fall 2022, Spring 2023, Fall 2024"
+      "summary": "Fall 2021, Fall 2022, Spring 2023, Fall 2024, Spring 2025"
     }
   ],
   "publications": [
