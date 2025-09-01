@@ -44,6 +44,12 @@
           <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">{{ content.area }}</h6>
           <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">{{ content.honors }}</h6>
         </div>
+        {% if content.advisor%}
+          <div class="col-xs-12 cl-sm-12 col-md-12" style="padding-left: 5px">
+            <span style="font-size: 0.95rem; font-weight: 450">
+              {{  'Advisor: ' }} </span> {{ content.advisor }}
+          </div>
+        {% endif %}
         <div style="padding-top: 5px; padding-left: 5px">
             {% for item in content.courses %}
               {% if item[0] != "" %}

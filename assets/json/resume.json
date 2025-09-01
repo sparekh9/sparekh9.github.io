@@ -17,6 +17,7 @@
       "studyType": "M.S. in Computer Science",
       "startDate": "2025-08",
       "endDate": "2026-08",
+      "advisor": "Prof. Carolyn Rosé",
       "courses": {
         "Selected Coursework": [
           "10-703 Deep Reinforcement Learning and Control",

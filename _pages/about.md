@@ -15,13 +15,13 @@ social: true # includes social icons at the bottom of the page
 ---
 
 Hi! I’m Siddharth, a student at Carnegie Mellon University where I'm completing my
-Fifth-Year Master's in Computer Science. My current research interests lie in the
-intersection of factuality and knowledge representations within Large Language Models.
+Fifth-Year Master's in Computer Science. My current research interests lie in
+factuality and how knowledge is learned and represented within Large Language Models.
 
 I've worked extensively with Professor [Carolyn Rosé's][rose] Document
 Understanding Group at CMU's Language Technologies Institute - collaborating
 with [Armineh Nourbakhsh][nourbakhsh] on developing graph-based models for form
-processing, and robust evaluation metrics for document visual question answering. 
+processing, and robust evaluation metrics for document visual question answering.
 
 Zooming out, I often find myself digging into the weeds of deep neural networks
 hoping to uncover something interesting.
