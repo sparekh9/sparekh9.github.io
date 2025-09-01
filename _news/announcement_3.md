@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I'm graduating from CMU with University and SCS College Honours!
+I graduated from CMU with University and SCS College Honours!

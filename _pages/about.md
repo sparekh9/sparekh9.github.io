@@ -14,11 +14,17 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Hi! I’m Siddharth, a Computer Science student at CMU, completing my undergraduate studies and transitioning into the fifth-year Master's program. My current research interests lie in the intersection of natural language processing, machine learning, and game theory - towards building intelligent systems using language agents. 
+Hi! I’m Siddharth, a student at Carnegie Mellon University where I'm completing my
+Fifth-Year Master's in Computer Science. My current research interests lie in the
+intersection of factuality and knowledge representations within Large Language Models.
 
-I've worked extensively with Professor [Carolyn Rosé's][rose] Document Understanding Group at CMU's Language Technologies Institute - collaborating with [Armineh Nourbakhsh][nourbakhsh] on developing graph-based models for form processing, and robust evaluation metrics for document visual question answering. 
+I've worked extensively with Professor [Carolyn Rosé's][rose] Document
+Understanding Group at CMU's Language Technologies Institute - collaborating
+with [Armineh Nourbakhsh][nourbakhsh] on developing graph-based models for form
+processing, and robust evaluation metrics for document visual question answering. 
 
-Zooming out, I often find myself along the confluence of mathematics and computer science hoping to find innovative applications with strong theoretical foundations.
+Zooming out, I often find myself digging into the weeds of deep neural networks
+hoping to uncover something interesting.
 
 Feel free to reach out to me to chat about my research or any shared interests!
 
