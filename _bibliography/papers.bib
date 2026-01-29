@@ -58,12 +58,30 @@
     abstract = "Document Visual Question Answering (VQA) models have evolved at an impressive rate over the past few years, coming close to or matching human performance on some benchmarks. We argue that common evaluation metrics used by popular benchmarks do not account for the semantic and multimodal groundedness of a model{'}s outputs. As a result, hallucinations and major semantic errors are treated the same way as well-grounded outputs, and the evaluation scores do not reflect the reasoning capabilities of the model. In response, we propose a new evaluation methodology that accounts for the groundedness of predictions with regard to the semantic characteristics of the output as well as the multimodal placement of the output within the input document. Our proposed methodology is parameterized in such a way that users can configure the score according to their preferences. We validate our scoring methodology using human judgment and show its potential impact on existing popular leaderboards. Through extensive analyses, we demonstrate that our proposed method produces scores that are a better indicator of a model{'}s robustness and tends to give higher rewards to better-calibrated answers."
 }
 
-@misc{wu2025r2codunderstandingtextgraphcomplementarity,
-      title={$R^2$-CoD: Understanding Text-Graph Complementarity in Relational Reasoning via Knowledge Co-Distillation}, 
-      author={Zhen Wu and Ritam Dutt and Luke M. Breitfeller and Armineh Nourbakhsh and Siddharth Parekh and Carolyn Rosé},
-      year={2025},
-      eprint={2508.01475},
-      archivePrefix={arXiv},
-      primaryClass={cs.AI},
-      url={https://arxiv.org/abs/2508.01475}, 
+@inproceedings{wu-etal-2025-r2,
+    title = "R^2-{C}o{D}: Understanding Text-Graph Complementarity in Relational Reasoning via Knowledge Co-Distillation",
+    author = "Wu, Zhen  and
+      Dutt, Ritam  and
+      Breitfeller, Luke M.  and
+      Nourbakhsh, Armineh  and
+      Parekh, Siddharth  and
+      Rose, Carolyn",
+    editor = "Inui, Kentaro  and
+      Sakti, Sakriani  and
+      Wang, Haofen  and
+      Wong, Derek F.  and
+      Bhattacharyya, Pushpak  and
+      Banerjee, Biplab  and
+      Ekbal, Asif  and
+      Chakraborty, Tanmoy  and
+      Singh, Dhirendra Pratap",
+    booktitle = "Proceedings of the 14th International Joint Conference on Natural Language Processing and the 4th Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics",
+    month = dec,
+    year = "2025",
+    address = "Mumbai, India",
+    publisher = "The Asian Federation of Natural Language Processing and The Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.ijcnlp-long.88/",
+    pages = "1628--1652",
+    ISBN = "979-8-89176-298-5",
+    abstract = "Relational reasoning lies at the core of many NLP tasks, drawing on complementary signals from text and graphs. While prior research has investigated how to leverage this dual complementarity, a detailed and systematic understanding of text-graph interplay and its effect on hybrid models remains underexplored. We take an analysis-driven approach to investigate text{--}graph representation complementarity via a unified architecture that supports knowledge co-distillation (CoD). We explore five tasks involving relational reasoning that differ in how text and graph structures encode the information needed to solve that task. By tracking how these dual representations evolve during training, we uncover interpretable patterns of alignment and divergence, and provide insights into when and why their integration is beneficial."
 }
