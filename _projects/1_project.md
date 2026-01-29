@@ -1,12 +1,18 @@
 ---
 layout: page
-title: project 1
-description: with background image
-img: assets/img/12.jpg
+title: Discero
+description: Self-Learning Platform 
+img: assets/img/discero_bg.jpg
 importance: 1
-category: work
+category: fun 
 related_publications: true
 ---
+
+## Motivation
+
+
+
+------------------------------------------------------------------------------------
 
 Every project has a beautiful feature showcase page.
 It's easy to include images in a flexible 3-column grid format.
@@ -18,7 +24,7 @@ To give your project a background in the portfolio page, just add the img tag to
     layout: page
     title: project
     description: a project with a background image
-    img: /assets/img/12.jpg
+    img: /assets/img/discero_bg.jpg
     ---
 
 <div class="row">

@@ -2,7 +2,7 @@
   "basics": {
     "name": "Siddharth Parekh",
     "image": "",
-    "email": "spparekh@andrew.cmu.edu",
+    "email": "spparekh.work@gmail.com",
     "phone": "(332) 248-8513",
     "location":"Pittsburgh, PA",
     "profiles": [
@@ -20,7 +20,8 @@
       "advisor": "Prof. Carolyn Rosé",
       "courses": {
         "Selected Coursework": [
-          "10-703 Deep Reinforcement Learning and Control",
+          "15-853 Theory of Markov Processes: Selected Topics with Applications in ML and GenAI",
+          "11-868 Large Language Model Systems",
           "11-711 Advanced Natural Language Processing",
           "15-888 Computational Game Solving"
         ]
@@ -109,11 +110,10 @@
       "name": "Programming Languages",
       "icon": "fa-solid fa-hashtag",
       "keywords": [
-        "C/C++",
         "Python",
-        "Java",
+        "C/C++",
         "JavaScript",
-        "Julia",
+        "TypeScript",
         "OCaml"
       ]
     },
@@ -122,11 +122,10 @@
       "icon": "fa-solid fa-hashtag",
       "keywords": [
         "PyTorch",
-        "Tensorflow",
         "Transformers",
-        "Scikit-Learn",
         "NumPy",
-        "Pandas"
+        "Pandas",
+        "Scikit-Learn"
       ]
     },
     {

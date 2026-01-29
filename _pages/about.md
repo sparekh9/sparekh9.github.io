@@ -15,16 +15,19 @@ social: true # includes social icons at the bottom of the page
 ---
 
 Hi! I’m Siddharth, a student at Carnegie Mellon University where I'm completing my
-Fifth-Year Master's in Computer Science. My current research interests lie in
-factuality and how knowledge is learned and represented within Large Language Models.
+Fifth-Year Master's in Computer Science. I am currently focused on 
+interpretability - specifically, uncovering the internal circuits and 
+representation geometry that LLMs use to parse and reason over structured data.
 
-I've worked extensively with Professor [Carolyn Rosé's][rose] Document
-Understanding Group at CMU's Language Technologies Institute - collaborating
+As a part of Professor [Carolyn Rosé's][rose] group at CMU's Language Technologies Institute - I collaborated
 with [Armineh Nourbakhsh][nourbakhsh] on developing graph-based models for form
 processing, and robust evaluation metrics for document visual question answering.
 
-Zooming out, I often find myself digging into the weeds of deep neural networks
-hoping to uncover something interesting.
+I am also fascinated by the intersection of game theory and AI — particularly, how 
+optimal play emerges in complex environments. I find that viewing 
+deep learning through this lens — as players discovering complex strategies in a massive game -
+makes for a compelling perspective driving interpretability research.
+
 
 Feel free to reach out to me to chat about my research or any shared interests!
 
