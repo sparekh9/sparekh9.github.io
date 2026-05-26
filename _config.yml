@@ -86,8 +86,8 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: The Age of Reason # blog_name will be displayed in your blog page
-blog_description: Game Theory, Machine Learning, and AI
+blog_name: Superposition # blog_name will be displayed in your blog page
+blog_description: Notes from the hidden layers...
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
@@ -257,8 +257,8 @@ jekyll-archives:
     tag: "/blog/tag/:name/"
     category: "/blog/category/:name/"
 
-display_tags: ["formatting", "images", "links", "math", "code", "blockquotes"] # these tags will be displayed on the front page of your blog
-display_categories: ["external-services"] # these categories will be displayed on the front page of your blog
+display_tags: ["computer-science", "education", "memory","artificial-intelligence"] # these tags will be displayed on the front page of your blog
+display_categories: [] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar

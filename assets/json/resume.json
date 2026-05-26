@@ -17,10 +17,11 @@
       "studyType": "M.S. in Computer Science",
       "startDate": "2025-08",
       "endDate": "2026-08",
+      "thesis": "Mechanisms of Tabular Reasoning in LLMs",
       "advisor": "Prof. Carolyn Rosé",
       "courses": {
         "Selected Coursework": [
-          "15-853 Theory of Markov Processes: Selected Topics with Applications in ML and GenAI",
+          "15-853 Theory of Markov Processes: Selected Topics in ML and GenAI",
           "11-868 Large Language Model Systems",
           "11-711 Advanced Natural Language Processing",
           "15-888 Computational Game Solving"
@@ -31,7 +32,7 @@
       "institution": "Carnegie Mellon University",
       "location": "Pittsburgh, PA",
       "url": "http://coursecatalog.web.cmu.edu/schools-colleges/schoolofcomputerscience/undergraduatecomputerscience/",
-      "honors": "University Honors, SCS College Honors",
+      "honors": "University Honors, School of Computer Science College Honors",
       "studyType": "B.S. in Computer Science, Minor in Machine Learning",
       "startDate": "2021-08",
       "endDate": "2025-05",
