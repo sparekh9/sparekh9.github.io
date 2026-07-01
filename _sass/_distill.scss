@@ -19,6 +19,7 @@ d-article d-byline a {
 }
 
 d-article {
+  align-items: start;
   border-top-color: var(--global-divider-color) !important;
   p,
   h1,
@@ -148,6 +149,16 @@ d-appendix {
     color: var(--global-distill-app-color) !important;
     &:hover {
       color: var(--global-hover-color) !important;
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  d-article {
+    d-contents {
+      height: 0;
+      min-height: 0;
+      overflow: visible;
     }
   }
 }
