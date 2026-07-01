@@ -2,7 +2,7 @@
 layout: distill
 title: "Structure from Sequence: Mechanisms of Tabular Retrieval"
 description: Master's Thesis
-date: 06/02/2026
+date: 01/07/2026
 importance: 1
 category: academic 
 related_publications: false
