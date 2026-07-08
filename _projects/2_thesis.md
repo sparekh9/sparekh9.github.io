@@ -6,7 +6,7 @@ date: 01/07/2026
 importance: 1
 category: academic 
 related_publications: false
-blog_vis_root: /assets/blog_vis/
+blog_vis_root: /assets/blog_vis/src/blog_vis/outputs
 
 featured: true
 mermaid:
@@ -315,30 +315,31 @@ I study the task from five angles:
 ## What the models can do
 
 Behaviorally, the task is not solved by default, but the model improves sharply
-when the prompt gives it an explicit row-index column.
+when the prompt gives it an explicit row-index column. In the completed Llama
+markdown grid, exact-match accuracy looks like this:
 
-| setting | exact-match |
-|---|---:|
-| Llama base, zero-shot, no row-index | 0.439 |
-| Llama base, zero-shot, + row-index | 0.768 |
-| Llama base, 2-shot, + row-index | 0.862 |
-| Llama Instruct, zero-shot, + row-index | **0.912** |
-| Llama Instruct, base-style 2-shot text prompt, + row-index | 0.876 |
-| Llama base, markdown pooled | 0.550 |
-| Llama base, CSV pooled | 0.483 |
-| Llama Instruct, markdown pooled | 0.678 |
-| Llama Instruct, CSV pooled | 0.563 |
+| model and prompt | no row-index | first-column row-index | randomized row-index position |
+|---|---:|---:|---:|
+| Llama base, zero-shot | 0.439 | 0.768 | 0.716 |
+| Llama base, 2-shot | 0.545 | 0.862 | 0.828 |
+| Llama Instruct, zero-shot chat template | 0.664 | 0.912 | 0.886 |
+| Llama Instruct, 2-shot chat template | 0.732 | **0.930** | 0.891 |
 
-Two facts jump out.
+First, row indexing matters enormously. Adding the row-index column lifts every
+cell by about 20 to 33 accuracy points. This is not a tiny prompt polish; it
+changes the task the model is doing internally.
 
-First, row indexing matters enormously. For Llama base, adding the row-index
-column improves exact match from 0.439 to 0.768. This is not a tiny prompt
-polish; it changes the task the model is doing internally.
+Second, the row anchor is mostly about content, not first-column position.
+Moving the row-index column to a randomized position only costs about 3 to 5
+points relative to keeping it first.
 
-Second, markdown is consistently easier than CSV. In the pooled runs, markdown
-beats CSV by about 7 points for Llama base and 12 points for Llama Instruct.
-That points toward a formatting story: some serializations create better
-landmarks for the model than others.
+Third, markdown is consistently easier than CSV. In the earlier format-level
+aggregates, markdown beats CSV by about 7 points for Llama base
+(0.550 vs 0.483) and 12 points for Llama Instruct (0.678 vs 0.563). Those
+"pooled" runs are not a separate condition; they are aggregate format
+comparisons over the evaluated real-table questions. Whitespace-only markdown
+also hurts: removing pipe delimiters drops Llama Instruct zero-shot with
+row-index from 0.912 to 0.873.
 
 <d-figure class="l-page">
   <img class="blog-viz"
@@ -355,7 +356,7 @@ landmarks for the model than others.
 The row-index result changed how I think about the task. Without an explicit
 index column, "row 7" means "count down to the seventh data row." With an index
 column, "row 7" means "match the token `7` in the question to the token `7` in
-the first column." That is a very different computation.
+the table's index column." That is a very different computation.
 
 The error analysis supports this distinction. Define `off_by_row` as an error
 where the model retrieves from the right column but the wrong row. Without a
@@ -365,7 +366,7 @@ row-index column, this is the dominant failure mode:
 |---|---:|---:|---:|---:|
 | base zero-shot, no row-index | 0.439 | **62.1%** | 4.0% | 25.9% |
 | base zero-shot, + row-index | 0.768 | 23.5% | 17.3% | 41.0% |
-| Instruct, no row-index | 0.678 | **73.7%** | 5.2% | 11.8% |
+| Instruct, no row-index | 0.664 | **70.7%** | 5.6% | 14.5% |
 | Instruct, + row-index | 0.912 | 12.0% | 32.0% | 30.1% |
 
 Mechanistically, this fits the token-routing results. The question token group
@@ -586,11 +587,20 @@ comparison is more subtle. When Llama base and Llama Instruct both see the same
 base-style 2-shot text prompt with row indices, exact match changes only from
 0.862 to 0.876: a +0.014 gain.
 
-That does not mean instruction tuning is irrelevant. It means the biggest
-observed behavior gap mixes together weights, prompt format, and shot count.
-Mechanistically, the head-level comparison suggests a more specific story:
-matching is mostly pretrained, while retrieval shifts more under instruction
-tuning.
+The updated grid separates three levers that were previously tangled together:
+
+| comparison | exact-match change | effect |
+|---|---:|---:|
+| prompt format, 2-shot text prompt -> 2-shot chat template | 0.876 -> 0.930 | **+0.054** |
+| shots, chat-template 0-shot -> chat-template 2-shot | 0.912 -> 0.930 | +0.018 |
+| weights, base -> Instruct under matched 2-shot text prompt | 0.862 -> 0.876 | +0.014 |
+
+That does not mean instruction tuning is irrelevant. It means most of the
+apparent Instruct advantage in this setting comes from prompt format, with a
+smaller contribution from in-context examples and an even smaller clean
+contribution from tuned weights. Mechanistically, the head-level comparison
+suggests a more specific story: matching is mostly pretrained, while retrieval
+shifts more under instruction tuning.
 
 Per-metric Base/Instruct Spearman correlations over all 1024 Llama heads:
 
@@ -693,14 +703,34 @@ to the table region at all.
   </figcaption>
 </d-figure>
 
+The base-model replication adds an important caution. On Llama base, 2-shot,
+row-indexed markdown, the baseline is already much more fragile: 34.4% of its
+errors are off-by-row, compared with 9.7% for Instruct. Column matching still
+replicates as the dominant bottleneck, but the row-matching specificity does
+not cleanly replicate because the random control is no longer inert:
+
+| ablated set | exact | delta acc | off_by_row share |
+|---|---:|---:|---:|
+| baseline | 0.880 | - | 34.4% |
+| column matching | 0.649 | **-0.231** | 46.3% |
+| row matching | 0.806 | -0.074 | 44.5% |
+| retrieval | 0.823 | -0.058 | 35.6% |
+| random control | 0.839 | -0.041 | 45.5% |
+
+So the clean causal row-tracking claim is currently strongest in the robust
+Instruct regime. In the base 2-shot regime, many perturbations seem to tip an
+already-marginal row-tracking process into off-by-row errors.
+
 ## What formatting helps?
 
 The mechanistic picture gives practical formatting advice:
 
 1. **Include a row-index column.** This turns row lookup into token matching and
-   removes the dominant off-by-row failure.
-2. **Prefer markdown over CSV.** Markdown gives the model stronger visual and
-   token-level landmarks.
+   removes the dominant off-by-row failure. It does not have to be the first
+   column to help; randomized index position retains most of the gain.
+2. **Prefer markdown over CSV, and keep the pipes.** Markdown gives the model
+   stronger visual and token-level landmarks; removing pipe delimiters causes a
+   small but measurable drop.
 3. **Keep tables narrow when possible.** The current failure threshold is around
    11 or more columns; position within a fixed-width table matters much less
    than width itself.
@@ -710,7 +740,7 @@ The mechanistic picture gives practical formatting advice:
    `Score`, ask for `Score`, not a paraphrase, unless you have separately tested
    semantic header matching.
 
-These are not just prompt-engineering tips. Each one corresponds to a proposed
+These are not just prompt-engineering guidelines; each one corresponds to a proposed
 internal operation: make row identity matchable, make columns landmarked, and
 keep the retrieval region small enough that later heads can stay locked onto
 the table.
@@ -724,7 +754,10 @@ Here is the current thesis story in hypothesis form.
    the target cell.
 2. **Matching is mostly pretrained; retrieval is more instruction-sensitive.**
    Alignment and column-name matching are highly stable across base and
-   Instruct, while retrieval and row-index routing shift more.
+   Instruct, while retrieval and row-index routing shift more. Behaviorally,
+   prompt format is the largest measured Instruct lever so far: +0.054 for
+   2-shot text prompt -> 2-shot chat template, compared with +0.018 for adding
+   chat-formatted examples and +0.014 for tuned weights under a matched prompt.
 3. **L8H11 is a matching hub.** It is the clearest single head that routes both
    column-name and row-index information to table landmarks.
 4. **Rows are found by index, not by row keyword.** The row-index column is the
@@ -735,22 +768,26 @@ Here is the current thesis story in hypothesis form.
 6. **Matching heads are causally necessary in the robust Instruct regime.**
    Ablating row-index matching heads selectively increases off_by_row errors;
    ablating column-matching heads causes a much larger accuracy drop and often
-   sends the model off-table.
+   sends the model off-table. The base 2-shot replication keeps the column
+   bottleneck but shows that row-specific attribution depends on a stable
+   behavioral regime: when baseline row tracking is already fragile, even random
+   head ablations can increase off-by-row errors.
 
 ## Current evidence and open questions
 
 The evidence is strongest for the Llama Instruct markdown row-index setting,
 where behavior, attention routing, token-level routing, and ablation all line
-up. The story is weaker where only a subset of analyses has finished. As of
-June 30, 2026, the full experiment grid is still being filled out across model,
-format, shot count, and row-index variants.
+up. As of July 8, 2026, the Llama markdown behavioral grid now includes
+no-index, first-column row-index, and randomized-position row-index conditions
+for base and Instruct. The story is still weaker where only a subset of
+analyses has finished, especially across Qwen, CSV, and intervention variants.
 
 The most important open questions are:
 
 1. **Can activation patching localize the computation more cleanly than
-   mean-ablation?** Mean-ablation is a blunt tool. Patching could test whether
-   the matching heads actually carry the row/column binding information needed
-   downstream.
+   mean-ablation?** Mean-ablation is a blunt tool. Patching on the robust
+   Instruct setting could test whether the matching heads actually carry the
+   row/column binding information needed downstream.
 2. **Does the two-stage story replicate across Qwen and CSV?** Early Qwen and
    CSV results are suggestive, but the complete aligned grid is still in
    progress.
@@ -760,8 +797,10 @@ The most important open questions are:
 4. **Can head selection be made blind?** The current head-vote and ablation
    choices are informed by ground-truth metrics. A stronger claim would select
    heads on one split and test causal effects on another.
-5. **What happens when row identifiers are random or moved away from the first
-   column?** This will separate "has a row id" from "has a first-column row id."
+5. **Can the remaining prompt-format corner be isolated?** The completed grid
+   separates chat-template format, chat-formatted examples, and tuned weights
+   for the main row-index setting, but an Instruct few-shot-text zero-shot run
+   would isolate shot effects away from the chat template.
 
 
 <script>
